@@ -5,6 +5,9 @@
 This repository contains the challenge code for Jetfuel iOS Engineer position. Repo's contains should only be used by managers and engineers from @Jetfuel for assessment purposes.
 
 ### Time
+
+- 11 to 12 hours
+
 ### Getting Started
 
 Run these commands to have the full project ready on your local machine.
