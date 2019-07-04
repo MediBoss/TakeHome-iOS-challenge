@@ -152,32 +152,7 @@ class MediaCollectionViewCell: UICollectionViewCell {
     /// Download the selected media
     @objc private func downloadButtonIsTapped(sender: UIButton) {
         
-        DispatchQueue.main.async {
-            ViewController.downloadingIndicator.startAnimating()
-        }
-    
-        DispatchQueue.global(qos: .background).async { [weak self] in
-            
-            guard let self = self else { return }
-            do {
-                guard let url = URL(string: self.media.download_url) else { return }
-                let _ = try Data(contentsOf: url)
-                
-                DispatchQueue.main.async {
-                    
-                    ViewController.downloadingIndicator.stopAnimating()
-                    let alert = Helper.createAlert(title: "Downloaded", message: "The Media has been successfully downloaded", mainActionMessage: "Ok", mainActionStyle: .default)
-                    UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
-                }
-            } catch {
-                DispatchQueue.main.async {
-                    
-                    ViewController.downloadingIndicator.stopAnimating()
-                    let alert = Helper.createAlert(title: "Download Failed", message: "The Media has been not downloaded", mainActionMessage: "Ok", mainActionStyle: .default)
-                    UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
-                }
-            }
-        }
+        NetworkManager.shared.downloadMedia(urlString: media.download_url)
     }
     
     /// Plays the video of the media is of type `video`
