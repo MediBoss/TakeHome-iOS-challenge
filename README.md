@@ -2,7 +2,7 @@
 
 ### Overview 
 
-This repository contains the challenge code for Jetfuel iOS Engineer position. Repo should only be used by managers and recruiters @Shopify for assessment purposes.
+This repository contains the challenge code for Jetfuel iOS Engineer position. Repo's contains should only be used by managers and engineers from @Jetfuel for assessment purposes.
 
 ### Time
 ### Getting Started
