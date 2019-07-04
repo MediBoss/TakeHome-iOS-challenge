@@ -44,11 +44,9 @@ root/
                 |-- Supporting Files
                 |-- Extensions               
                 |-- Info.plist          
-        |-- JetfuelTakeHomeTests
         |-- Podfile
         |-- .gitignore
         |-- Podfile.lock  
-        |-- JetfuelTakeHomeTests/ 
 |
 |-- Screenshots/                                                   
 |-- README.md                          
