@@ -13,7 +13,6 @@ class ViewController: BaseUICollectionViewList {
     // - MARK : CLASS VARIABLES
     var campaigns = [Campaign]()
     private let refreshControl = UIRefreshControl()
-    private let viewPresentingIndicator = UIActivityIndicatorView(style: .whiteLarge)
     static var downloadingIndicator = UIActivityIndicatorView(style: .gray)
     
     // - MARK : VIEW CONTROLLER LIFECYCLE METHODS
@@ -39,24 +38,21 @@ class ViewController: BaseUICollectionViewList {
                 
                 DispatchQueue.main.async { [weak self] in
                     guard let self = self else { return }
-                    self.viewPresentingIndicator.stopAnimating()
                     self.collectionView.reloadData()
                 }
                 
             // Show an alert to the user if the network request fails
             case .failure(_):
                 
-                let alert = Helper.createAlert(title: "Network Error", message: "Please check your internet connection", mainActionMessage: "Retry", mainActionStyle: .default)
+                let alert = Helper.createAlert(title: "Network Error", message: "Please check your internet connection", mainActionMessage: "Ok", mainActionStyle: .default)
                 DispatchQueue.main.async { [weak self] in
                     
                     guard let self = self else { return }
-                    self.viewPresentingIndicator.stopAnimating()
                     self.present(alert, animated: true, completion: nil)
                 }
             }
         }
     }
-    
     
     private func configureNavBar() {
         
@@ -66,11 +62,6 @@ class ViewController: BaseUICollectionViewList {
     
     /// Sets up all of the class' ui components 
     private func configureUIElelemnts(){
-        
-        // sets up the spinner's position and starts animating
-        view.addSubview(viewPresentingIndicator)
-        viewPresentingIndicator.center = view.center
-        viewPresentingIndicator.startAnimating()
         
         // configure the collection view style and registering cell
         collectionView.backgroundColor = .white

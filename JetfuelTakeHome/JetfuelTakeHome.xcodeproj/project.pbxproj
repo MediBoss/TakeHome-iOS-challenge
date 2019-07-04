@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		020275AAA9E07203BB4485EB /* Pods_JetfuelTakeHomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A438AA9FCF85F62468A74B /* Pods_JetfuelTakeHomeTests.framework */; };
 		2E5CA39C59978404875B1DEC /* Pods_JetfuelTakeHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25972439B09C998BADCB3BA1 /* Pods_JetfuelTakeHome.framework */; };
+		B816C72222CDA43800484BC7 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = B816C72122CDA43800484BC7 /* Media.swift */; };
 		B845D7C422CD2617008592C5 /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B845D7C322CD2617008592C5 /* CustomStackView.swift */; };
 		B845D7C622CD5660008592C5 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B845D7C522CD5660008592C5 /* NetworkError.swift */; };
 		B845D7C822CD583C008592C5 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B845D7C722CD583C008592C5 /* ViewController+Extension.swift */; };
@@ -44,6 +45,7 @@
 		66263F75EED97F8DBF72A8FA /* Pods-JetfuelTakeHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetfuelTakeHome.release.xcconfig"; path = "Target Support Files/Pods-JetfuelTakeHome/Pods-JetfuelTakeHome.release.xcconfig"; sourceTree = "<group>"; };
 		79A438AA9FCF85F62468A74B /* Pods_JetfuelTakeHomeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JetfuelTakeHomeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB67A935FA53648D68C2D7D1 /* Pods-JetfuelTakeHomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetfuelTakeHomeTests.release.xcconfig"; path = "Target Support Files/Pods-JetfuelTakeHomeTests/Pods-JetfuelTakeHomeTests.release.xcconfig"; sourceTree = "<group>"; };
+		B816C72122CDA43800484BC7 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		B845D7C322CD2617008592C5 /* CustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
 		B845D7C522CD5660008592C5 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		B845D7C722CD583C008592C5 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				B8E402D122CBF3AF0094220C /* Campaign.swift */,
+				B816C72122CDA43800484BC7 /* Media.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 			files = (
 				B87094F822CC1CBE0001F854 /* UIView+Extension.swift in Sources */,
 				B8E402B022CBCB320094220C /* ViewController.swift in Sources */,
+				B816C72222CDA43800484BC7 /* Media.swift in Sources */,
 				B87094FA22CC31E80001F854 /* MediaCollectionViewCell.swift in Sources */,
 				B8E402D422CC058D0094220C /* NetworkManager.swift in Sources */,
 				B87094FD22CC32970001F854 /* FeedCollectionViewCell+Extension.swift in Sources */,

@@ -183,8 +183,8 @@ class MediaCollectionViewCell: UICollectionViewCell {
     /// Plays the video of the media is of type `video`
     @objc private func playButtonIsTapped(sender: UIButton) {
         
-        guard let url = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4") else { return }
-        
+        // NOTE : Media's url has tokens in it, making it hard to download from the AVPlayer init.
+        guard let url = URL(string: media.download_url) else { return }
         mediaPlayer = AVPlayer(url: url)
         mediaPlayerLayer = AVPlayerLayer(player: mediaPlayer)
         mediaPlayerLayer?.frame = self.mediaPreview.frame

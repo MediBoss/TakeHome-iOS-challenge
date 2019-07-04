@@ -14,7 +14,7 @@ struct Helper{
     static func createAlert(title: String, message: String, mainActionMessage: String, mainActionStyle: UIAlertAction.Style) -> UIAlertController {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
         alert.addAction(UIAlertAction(title: mainActionMessage, style: mainActionStyle, handler: nil))
         return alert
     }

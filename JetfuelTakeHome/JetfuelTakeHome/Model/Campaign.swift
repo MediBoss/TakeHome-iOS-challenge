@@ -20,11 +20,3 @@ struct Campaign: Decodable{
 struct Campaigns: Decodable {
     let campaigns: [Campaign]
 }
-
-struct Media: Decodable {
-    
-    let cover_photo_url: String
-    let download_url: String
-    let tracking_link: String
-    let media_type: String
-}

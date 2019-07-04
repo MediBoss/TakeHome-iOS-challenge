@@ -32,6 +32,7 @@ class FeedCollectionViewCell: UICollectionViewCell {
         label.text = ""
         label.textColor = .black
         label.font = UIFont(name: "SFProText-Bold", size: 19)
+        label.translatesAutoresizingMaskIntoConstraints =  false
         return label
     }()
     
@@ -41,6 +42,7 @@ class FeedCollectionViewCell: UICollectionViewCell {
         label.text = ""
         label.textColor = UIColor(red: 0, green: 0.5765, blue: 0.1882, alpha: 1.0)
         label.font = UIFont(name: "SFProText-Regular", size: 16)
+        label.translatesAutoresizingMaskIntoConstraints =  false
         return label
     }()
     
@@ -84,22 +86,23 @@ class FeedCollectionViewCell: UICollectionViewCell {
     // - MARK: CLASS METHODS
     private func layoutCellItems() {
         
-        let labelStackView = UIStackView(arrangedSubviews: [campaignNameLabel, payPerInstallLabel])
-        labelStackView.axis = .vertical
-        labelStackView.distribution = .fill
-        labelStackView.spacing = 12
-        
-        let topCardStackView = UIStackView(arrangedSubviews: [campaignIconView, labelStackView])
-        topCardStackView.axis = .horizontal
-        topCardStackView.distribution = .fill
-        topCardStackView.spacing = 10
-        topCardStackView.alignment = .center
-        
-        let mainStackView = UIStackView(arrangedSubviews: [topCardStackView, mediaCollectionView])
-        mainStackView.spacing = 15
-        mainStackView.axis = .vertical
-        mainStackView.distribution = .fill
-        
+        let labelStackView = CustomStackView(subviews: [campaignNameLabel, payPerInstallLabel],
+                                             alignment: .fill,
+                                             axis: .vertical,
+                                             distribution: .fill,
+                                             spacing: 5)
+
+        let topCardStackView = CustomStackView(subviews: [campaignIconView, labelStackView],
+                                               alignment: .fill,
+                                               axis: .horizontal,
+                                               distribution: .fill,
+                                               spacing: 10)
+
+        let mainStackView = CustomStackView(subviews: [topCardStackView, mediaCollectionView],
+                                            alignment: .fill,
+                                            axis: .vertical,
+                                            distribution: .fill,
+                                            spacing: 15)
         addSubview(mainStackView)
         mainStackView.fillSuperview(padding: .init(top: 15, left: 10, bottom: 0, right: 10))
     }
