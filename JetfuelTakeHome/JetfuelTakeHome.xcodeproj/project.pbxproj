@@ -23,7 +23,6 @@
 		B8E402B022CBCB320094220C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E402AF22CBCB320094220C /* ViewController.swift */; };
 		B8E402B522CBCB330094220C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8E402B422CBCB330094220C /* Assets.xcassets */; };
 		B8E402B822CBCB330094220C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8E402B622CBCB330094220C /* LaunchScreen.storyboard */; };
-		B8E402C322CBCB330094220C /* JetfuelTakeHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E402C222CBCB330094220C /* JetfuelTakeHomeTests.swift */; };
 		B8E402D222CBF3AF0094220C /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E402D122CBF3AF0094220C /* Campaign.swift */; };
 		B8E402D422CC058D0094220C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E402D322CC058D0094220C /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
@@ -62,8 +61,6 @@
 		B8E402B722CBCB330094220C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8E402B922CBCB330094220C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8E402BE22CBCB330094220C /* JetfuelTakeHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JetfuelTakeHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B8E402C222CBCB330094220C /* JetfuelTakeHomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JetfuelTakeHomeTests.swift; sourceTree = "<group>"; };
-		B8E402C422CBCB330094220C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8E402D122CBF3AF0094220C /* Campaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		B8E402D322CC058D0094220C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,7 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				B8E402AC22CBCB320094220C /* JetfuelTakeHome */,
-				B8E402C122CBCB330094220C /* JetfuelTakeHomeTests */,
 				B8E402AB22CBCB320094220C /* Products */,
 				4CEEA737C84FBE1A7AF99961 /* Pods */,
 				1C50C9B9D5327B0D1EC76A79 /* Frameworks */,
@@ -161,15 +157,6 @@
 				B8E402B922CBCB330094220C /* Info.plist */,
 			);
 			path = JetfuelTakeHome;
-			sourceTree = "<group>";
-		};
-		B8E402C122CBCB330094220C /* JetfuelTakeHomeTests */ = {
-			isa = PBXGroup;
-			children = (
-				B8E402C222CBCB330094220C /* JetfuelTakeHomeTests.swift */,
-				B8E402C422CBCB330094220C /* Info.plist */,
-			);
-			path = JetfuelTakeHomeTests;
 			sourceTree = "<group>";
 		};
 		B8E402CD22CBCB3C0094220C /* Controller */ = {
@@ -402,7 +389,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8E402C322CBCB330094220C /* JetfuelTakeHomeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
