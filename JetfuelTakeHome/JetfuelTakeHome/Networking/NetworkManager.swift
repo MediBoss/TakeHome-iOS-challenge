@@ -41,8 +41,4 @@ struct NetworkManager {
             }
         }.resume()
     }
-    
-    func downloadMedia() {
-        
-    }
 }
