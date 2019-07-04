@@ -12,11 +12,18 @@ This repository contains the challenge code for Jetfuel iOS Engineer position. R
 
 Run these commands to have the full project ready on your local machine.
 
-`` git clone https://github.com/MediBoss/TakeHome-iOS-challenge``
+`` git clone https://github.com/MediBoss/TakeHome-iOS-challenge.git``
 
 `` cd JetfuelTakeHome/``
 
-`` pod install ``
+`` pod install `` to get all dependencies. Run `` $ sudo gem install cocoapods `` if you don't have cocoapod installed.
+
+### Built with
+
+* Swift 5.0 - Main language
+* Xcode 10.0 - Main IDE
+* SDWebImage - Image downloading & caching
+
 
 ### File/Folder Architecture
 
@@ -25,38 +32,22 @@ I followed the MVC architecure for this project.
 root/
 |
 |
-|-- Shopify/                
-        |-- Models                  
-        |-- Views                    
-        |-- Controllers              
-        |-- Networking  
-                |-- HTTP
-                |-- Services
-          
-        |-- Supporting Files        
-        |-- Extensions               
-        |-- Info.plist             
+|-- JetfuelTakeHome/
+        |-- JetfuelTakeHome
+                |-- Model              
+                |-- View                    
+                |-- Controller             
+                |-- Networking  
+                |-- Supporting Files
+                |-- Extensions               
+                |-- Info.plist          
+        |-- JetfuelTakeHomeTests
+        |-- Podfile
+        |-- .gitignore
+        |-- Podfile.lock  
+        |-- JetfuelTakeHomeTests/ 
 |
-|-- Screenshots/                   
-      | -- 
-      | -- 
-      
-|
-|-- JetfuelTakeHomeTests/                   
-|
-|-- ShopifyUITests/                 
-|
-|                   
+|-- Screenshots/                                                   
 |-- README.md                          
-|-- Podfile
-|-- Podfile.lock
+
 ```
-
-### Engineer
-* **Medi Assumani** - *iOS Engineer*
-
-### Built with
-
-* Swift 5.0 - Main language
-* Xcode 10.0 - Main IDE
-* SDWebImage - Image downloading & caching
