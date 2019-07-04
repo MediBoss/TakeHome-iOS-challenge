@@ -13,7 +13,8 @@ class ViewController: BaseUICollectionViewList {
     // - MARK : CLASS VARIABLES
     var campaigns = [Campaign]()
     private let refreshControl = UIRefreshControl()
-    private let loadingIndicator = UIActivityIndicatorView(style: .gray)
+    private let viewPresentingIndicator = UIActivityIndicatorView(style: .whiteLarge)
+    static var downloadingIndicator = UIActivityIndicatorView(style: .gray)
     
     // - MARK : VIEW CONTROLLER LIFECYCLE METHODS
     
@@ -22,6 +23,7 @@ class ViewController: BaseUICollectionViewList {
 
         navigationItem.title = "PLUGS"
         configureUIElelemnts()
+        configureNavBar()
         fetchData()
     }
 
@@ -37,7 +39,7 @@ class ViewController: BaseUICollectionViewList {
                 
                 DispatchQueue.main.async { [weak self] in
                     guard let self = self else { return }
-                    self.loadingIndicator.stopAnimating()
+                    self.viewPresentingIndicator.stopAnimating()
                     self.collectionView.reloadData()
                 }
                 
@@ -48,7 +50,7 @@ class ViewController: BaseUICollectionViewList {
                 DispatchQueue.main.async { [weak self] in
                     
                     guard let self = self else { return }
-                    self.loadingIndicator.stopAnimating()
+                    self.viewPresentingIndicator.stopAnimating()
                     self.present(alert, animated: true, completion: nil)
                 }
             }
@@ -58,15 +60,16 @@ class ViewController: BaseUICollectionViewList {
     
     private func configureNavBar() {
         
-        navigationController
+        let barButton = UIBarButtonItem(customView: ViewController.downloadingIndicator)
+        self.navigationItem.setRightBarButton(barButton, animated: true)
     }
     
     private func configureUIElelemnts(){
         
         // sets up the spinner's position and starts animating
-        view.addSubview(loadingIndicator)
-        loadingIndicator.center = view.center
-        loadingIndicator.startAnimating()
+        view.addSubview(viewPresentingIndicator)
+        viewPresentingIndicator.center = view.center
+        viewPresentingIndicator.startAnimating()
         
         // configure the collection view style and registering cell
         collectionView.backgroundColor = .white

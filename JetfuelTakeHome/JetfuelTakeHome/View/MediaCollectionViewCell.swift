@@ -15,12 +15,24 @@ class MediaCollectionViewCell: UICollectionViewCell {
     // - MARK: CLASS VARIABLES
     
     static let id = "MediaCollectionViewCellID"
-    var downloadLinkString = ""
-    var copyLinkString = ""
     var mediaPlayer: AVPlayer?
     var mediaPlayerLayer: AVPlayerLayer?
-    // - MARK : UI ELEMENTS
     
+    var media: Media! {
+        didSet {
+            
+            let previewUrlString = media.cover_photo_url
+            let url = URL(string: previewUrlString)
+            
+            if media.media_type == "video" {
+                playButton.layer.opacity = 1.0
+            }
+            
+            mediaPreview.sd_setImage(with: url!, placeholderImage: UIImage(named: "image_placeholder"), options: [], completed: nil)
+        }
+    }
+    
+    // - MARK : UI ELEMENTS
     let mediaPreview: UIImageView = {
         
         let imageview = UIImageView()
@@ -132,7 +144,7 @@ class MediaCollectionViewCell: UICollectionViewCell {
     @objc private func copyLinkButtonIsTapped(sender: UIButton) {
 
         let clipboard = UIPasteboard.general
-        clipboard.string = copyLinkString
+        clipboard.string = media.tracking_link
         let alert = Helper.createAlert(title: "Copied!", message: "The Link has been successfully copied", mainActionMessage: "Ok", mainActionStyle: .default)
         UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
     }
@@ -140,20 +152,27 @@ class MediaCollectionViewCell: UICollectionViewCell {
     /// Download the selected media
     @objc private func downloadButtonIsTapped(sender: UIButton) {
         
-        DispatchQueue.global(qos: .background).async {
+        DispatchQueue.main.async {
+            ViewController.downloadingIndicator.startAnimating()
+        }
+    
+        DispatchQueue.global(qos: .background).async { [weak self] in
             
+            guard let self = self else { return }
             do {
-                guard let url = URL(string: self.downloadLinkString) else { return }
+                guard let url = URL(string: self.media.download_url) else { return }
                 let _ = try Data(contentsOf: url)
                 
                 DispatchQueue.main.async {
                     
+                    ViewController.downloadingIndicator.stopAnimating()
                     let alert = Helper.createAlert(title: "Downloaded", message: "The Media has been successfully downloaded", mainActionMessage: "Ok", mainActionStyle: .default)
                     UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
                 }
             } catch {
                 DispatchQueue.main.async {
                     
+                    ViewController.downloadingIndicator.stopAnimating()
                     let alert = Helper.createAlert(title: "Download Failed", message: "The Media has been not downloaded", mainActionMessage: "Ok", mainActionStyle: .default)
                     UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
                 }

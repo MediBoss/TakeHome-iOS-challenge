@@ -12,6 +12,10 @@ import UIKit
 
 class FeedCollectionViewCell: UICollectionViewCell {
     
+    // - MARK : CLASS VARIABLES
+    static let id = "FeedCollectionViewCellID"
+    
+    // - MARK: UIELEMENTS
     let mediaCollectionView: UICollectionView = {
 
         let layout = UICollectionViewFlowLayout()
@@ -21,10 +25,7 @@ class FeedCollectionViewCell: UICollectionViewCell {
 
         return collectionView
     }()
-    
-    
-    static let id = "FeedCollectionViewCellID"
-    
+
     let campaignNameLabel: UILabel = {
         
         let label = UILabel()
@@ -56,7 +57,6 @@ class FeedCollectionViewCell: UICollectionViewCell {
     
 
     var campaign: Campaign! {
-        
         didSet {
             
             guard let iconUrl = URL(string: campaign?.campaign_icon_url ?? "") else { return }
@@ -67,6 +67,7 @@ class FeedCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    // - MARK: INITIALIZERS
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
@@ -80,9 +81,8 @@ class FeedCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // - MARK: CLASS METHODS
     private func layoutCellItems() {
-        
-        
         
         let labelStackView = UIStackView(arrangedSubviews: [campaignNameLabel, payPerInstallLabel])
         labelStackView.axis = .vertical
