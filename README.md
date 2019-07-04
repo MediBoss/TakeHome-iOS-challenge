@@ -10,7 +10,9 @@ This repository contains the challenge code for Jetfuel iOS Engineer position. R
 Run these commands to have the full project ready on your local machine.
 
 `` git clone https://github.com/MediBoss/TakeHome-iOS-challenge``
+
 `` cd JetfuelTakeHome/``
+
 `` pod install ``
 
 ### File/Folder Architecture
