@@ -42,34 +42,4 @@ struct NetworkManager {
             }
         }.resume()
     }
-    
-    /// Download video from a remote data storage
-    func downloadMedia(urlString: String) {
-        
-        DispatchQueue.main.async {
-            ViewController.downloadingIndicator.startAnimating()
-        }
-        
-        DispatchQueue.global(qos: .background).async {
-            
-            do {
-                guard let url = URL(string: urlString) else { return }
-                let _ = try Data(contentsOf: url)
-                
-                DispatchQueue.main.async {
-                    
-                    ViewController.downloadingIndicator.stopAnimating()
-                    let alert = Helper.createAlert(title: "Downloaded", message: "The Media has been successfully downloaded", mainActionMessage: "Ok", mainActionStyle: .default)
-                    UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
-                }
-            } catch {
-                DispatchQueue.main.async {
-                    
-                    ViewController.downloadingIndicator.stopAnimating()
-                    let alert = Helper.createAlert(title: "Download Failed", message: "The Media has been not downloaded", mainActionMessage: "Ok", mainActionStyle: .default)
-                    UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
-                }
-            }
-        }
-    }
 }
