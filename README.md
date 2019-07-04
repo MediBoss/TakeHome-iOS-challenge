@@ -1,4 +1,7 @@
 # TakeHome-iOS-challenge
+<img src= "iphone-x.png" width = 250 height = 500></img>
+<img src= "iphone-8.png" width = 250 height = 500></img>
+<img src= "iphone-5s.png" width = 250 height = 500></img>
 
 ### Overview 
 
@@ -51,9 +54,3 @@ root/
 |-- README.md                          
 
 ```
-
-### Screenshots
-
-<img src= "iphone-x.png" width = 250 height = 500></img>
-<img src= "iphone-8.png" width = 250 height = 500></img>
-<img src= "iphone-5s.png" width = 250 height = 500></img>
