@@ -9,7 +9,7 @@ This repository contains the challenge code for Jetfuel iOS Engineer position. R
 
 ### Time
 
-- 11 to 12 hours
+- 12 to 13 hours
 
 ### Getting Started
 
