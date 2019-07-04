@@ -52,3 +52,8 @@ root/
 |-- README.md                          
 
 ```
+
+### Challenges
+
+* Playing video of selected media since the URL had tokens in it
+* Laying out the two buttons(link & cell) with proper assets and right resolution
