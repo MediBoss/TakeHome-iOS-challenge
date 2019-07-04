@@ -64,6 +64,7 @@ class ViewController: BaseUICollectionViewList {
         self.navigationItem.setRightBarButton(barButton, animated: true)
     }
     
+    /// Sets up all of the class' ui components 
     private func configureUIElelemnts(){
         
         // sets up the spinner's position and starts animating
