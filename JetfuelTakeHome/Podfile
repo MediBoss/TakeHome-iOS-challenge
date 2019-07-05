@@ -6,11 +6,5 @@ target 'JetfuelTakeHome' do
   use_frameworks!
 
   # Pods for JetfuelTakeHome
- 
   pod 'SDWebImage'
-  target 'JetfuelTakeHomeTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end
