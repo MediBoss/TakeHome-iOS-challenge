@@ -26,16 +26,6 @@
 		B8E402D422CC058D0094220C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E402D322CC058D0094220C /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B8E402BF22CBCB330094220C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B8E402A222CBCB320094220C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B8E402A922CBCB320094220C;
-			remoteInfo = JetfuelTakeHome;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		1B3769F3B32DED99D6D56CF6 /* Pods-JetfuelTakeHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetfuelTakeHome.debug.xcconfig"; path = "Target Support Files/Pods-JetfuelTakeHome/Pods-JetfuelTakeHome.debug.xcconfig"; sourceTree = "<group>"; };
 		25972439B09C998BADCB3BA1 /* Pods_JetfuelTakeHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JetfuelTakeHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +47,6 @@
 		B8E402B422CBCB330094220C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8E402B722CBCB330094220C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8E402B922CBCB330094220C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B8E402BE22CBCB330094220C /* JetfuelTakeHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JetfuelTakeHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8E402D122CBF3AF0094220C /* Campaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		B8E402D322CC058D0094220C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,13 +57,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E5CA39C59978404875B1DEC /* Pods_JetfuelTakeHome.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B8E402BB22CBCB330094220C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				B8E402AA22CBCB320094220C /* JetfuelTakeHome.app */,
-				B8E402BE22CBCB330094220C /* JetfuelTakeHomeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,24 +193,6 @@
 			productReference = B8E402AA22CBCB320094220C /* JetfuelTakeHome.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B8E402BD22CBCB330094220C /* JetfuelTakeHomeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B8E402CA22CBCB340094220C /* Build configuration list for PBXNativeTarget "JetfuelTakeHomeTests" */;
-			buildPhases = (
-				B8E402BA22CBCB330094220C /* Sources */,
-				B8E402BB22CBCB330094220C /* Frameworks */,
-				B8E402BC22CBCB330094220C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B8E402C022CBCB330094220C /* PBXTargetDependency */,
-			);
-			name = JetfuelTakeHomeTests;
-			productName = JetfuelTakeHomeTests;
-			productReference = B8E402BE22CBCB330094220C /* JetfuelTakeHomeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -242,10 +205,6 @@
 				TargetAttributes = {
 					B8E402A922CBCB320094220C = {
 						CreatedOnToolsVersion = 10.2.1;
-					};
-					B8E402BD22CBCB330094220C = {
-						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = B8E402A922CBCB320094220C;
 					};
 				};
 			};
@@ -263,7 +222,6 @@
 			projectRoot = "";
 			targets = (
 				B8E402A922CBCB320094220C /* JetfuelTakeHome */,
-				B8E402BD22CBCB330094220C /* JetfuelTakeHomeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -275,13 +233,6 @@
 			files = (
 				B8E402B822CBCB330094220C /* LaunchScreen.storyboard in Resources */,
 				B8E402B522CBCB330094220C /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B8E402BC22CBCB330094220C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,22 +307,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B8E402BA22CBCB330094220C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B8E402C022CBCB330094220C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B8E402A922CBCB320094220C /* JetfuelTakeHome */;
-			targetProxy = B8E402BF22CBCB330094220C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B8E402B622CBCB330094220C /* LaunchScreen.storyboard */ = {
@@ -503,7 +439,7 @@
 		};
 		B8E402C822CBCB340094220C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B3769F3B32DED99D6D56CF6 /* Pods-JetfuelTakeHome.debug.xcconfig */;
+			baseConfigurationReference = 66263F75EED97F8DBF72A8FA /* Pods-JetfuelTakeHome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,48 +475,6 @@
 			};
 			name = Release;
 		};
-		B8E402CB22CBCB340094220C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 966X5T4Q98;
-				INFOPLIST_FILE = JetfuelTakeHomeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = mediassumani.JetfuelTakeHomeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JetfuelTakeHome.app/JetfuelTakeHome";
-			};
-			name = Debug;
-		};
-		B8E402CC22CBCB340094220C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 966X5T4Q98;
-				INFOPLIST_FILE = JetfuelTakeHomeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = mediassumani.JetfuelTakeHomeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JetfuelTakeHome.app/JetfuelTakeHome";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -598,15 +492,6 @@
 			buildConfigurations = (
 				B8E402C822CBCB340094220C /* Debug */,
 				B8E402C922CBCB340094220C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B8E402CA22CBCB340094220C /* Build configuration list for PBXNativeTarget "JetfuelTakeHomeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B8E402CB22CBCB340094220C /* Debug */,
-				B8E402CC22CBCB340094220C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
