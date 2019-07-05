@@ -17,7 +17,7 @@ Run these commands to have the full project ready on your local machine.
 
 `` git clone https://github.com/MediBoss/TakeHome-iOS-challenge.git``
 
-`` cd JetfuelTakeHome/``
+`` cd JetfuelTakeHome/JetfuelTakeHome``
 
 `` pod install `` to get all dependencies. Run `` $ sudo gem install cocoapods `` if you don't have cocoapod installed.
 
