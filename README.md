@@ -15,11 +15,22 @@ This repository contains the challenge code for Jetfuel iOS Engineer position. R
 
 Run these commands to have the full project ready on your local machine.
 
-`` git clone https://github.com/MediBoss/TakeHome-iOS-challenge.git``
+* `` git clone https://github.com/MediBoss/TakeHome-iOS-challenge``
 
-`` cd JetfuelTakeHome/JetfuelTakeHome``
+* `` cd TakeHome-iOS-challenge/JetfuelTakeHome``
 
-`` pod install `` to get all dependencies. Run `` $ sudo gem install cocoapods `` if you don't have cocoapod installed.
+* `` pod install `` or ``pod update`` if you don't have the latest version.
+
+* Open the ``JetfuelTakeHome.xcworkspace`` file to run on Xcode
+
+### Debugging Note
+
+If you get a "The sandobox is not in sync with the podfile.lock...", follow these simple steps:
+
+* Click on "JetfuelTakeHome" project on the navigator
+* Go under the info tab, you will see a configuration dropdown.
+* Click on the debug dropdown -> You will see a dart target symbol next to JetfuelTakeHome
+* change the value from ``none`` to ``Pods-JetfuelTakeHome.debug``
 
 ### Built with
 
