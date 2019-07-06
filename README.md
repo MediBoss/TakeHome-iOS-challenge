@@ -27,10 +27,10 @@ Run these commands to have the full project ready on your local machine.
 
 If you get a "The sandobox is not in sync with the podfile.lock...", follow these simple steps:
 
-* Click on "JetfuelTakeHome" project on the navigator
-* Go under the info tab, you will see a configuration dropdown.
-* Click on the debug dropdown -> You will see a dart target symbol next to JetfuelTakeHome
-* change the value from ``none`` to ``Pods-JetfuelTakeHome.debug``
+* On Xcode's navigation pane, click on "JetfuelTakeHome" project(with the blue xcode logo)
+* Go under the info tab, you will see a configurations dropdown.
+* Click on the debug dropdown -> You will see a dart target symbol next to JetfuelTakeHome.
+* change the value from ``none`` to ``Pods-JetfuelTakeHome.debug``.
 
 ### Built with
 
